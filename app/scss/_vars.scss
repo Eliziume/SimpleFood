@@ -1,0 +1,51 @@
+$size-body: 20px;
+$lh-body: 1.5;
+$silver-100: #F9FAFF;
+$padding-section: 120px;
+
+$dark: #31352B;
+$orange-900: #FF6838;
+$color-white: #FFFFFF;
+$darkBlue-900: #363853;
+$gray: #C2C2C2;
+$fill: #fff2ed;
+$color-bs: 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+$size-title: 36px;
+
+
+%rubik-300 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
+%rubik-400 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+%flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%background-image {
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+
+
