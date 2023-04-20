@@ -1,5 +1,6 @@
 body {
-  @extend %rubik-400;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
   font-size: $size-body;
   line-height: $lh-body;
   color: $dark;
@@ -16,7 +17,7 @@ body {
 }
 
 .section {
-  padding-bottom: $padding-section;
+  padding: $padding-section;
 }
 
 .sr-only {
@@ -50,9 +51,18 @@ body {
   }
 }
 
+.category__list .mixitup-control-active {
+
+  background-color: $orange-900;
+  color: $color-white;
+
+  .category__icon {
+    fill: $color-white;
+  }
+}
+
 .logo {
   border-radius: 5px;
-  margin-bottom: 30px;
   transition: box-shadow 0.5s, opacity 0.5s;
 
   &:focus {
@@ -63,8 +73,8 @@ body {
     opacity: 0.7;
   }
 
-  &:active{
-    opacity: 0.4
+  &:active {
+    opacity: 0.4;
   }
 }
 
@@ -83,25 +93,25 @@ body {
   letter-spacing: 0.03em;
   padding: 12px 32px;
   border-radius: 6px;
-  border: 1px solid transparent;
   background-color: $orange-900;
   color: $color-white;
+  transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
 
   &:focus {
     background-color: rgba(255, 122, 80, 0.1);
     color: $orange-900;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   }
 
   &:hover {
     background-color: $color-white;
-    border: 1px solid $orange-900;
+    color: $orange-900;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   }
 
   &:active {
-    box-shadow: none;
-    border: 1px solid transparent;
     background-color: rgba(255, 122, 80, 0.1);
-    text-shadow: none;
+    box-shadow: none;
   }
 }
 
