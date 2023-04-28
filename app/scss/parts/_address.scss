@@ -1,0 +1,42 @@
+.address {
+  &__list {
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 2;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding-left: 32px;
+    @include line-clamp(1);
+
+    &::before {
+      @extend %background-image;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &--place::before {
+      background-image: url("../images/footer/icons/location.svg");
+    }
+
+    &--phone::before {
+      background-image: url("../images/footer/icons/phone.svg");
+    }
+
+    &--mail::before {
+      background-image: url("../images/footer/icons/mail.svg");
+    }
+  }
+}

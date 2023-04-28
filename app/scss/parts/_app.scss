@@ -1,0 +1,82 @@
+.app {
+  &__inner {
+    background: 100% no-repeat;
+    background-size: 570px 380px;
+    padding: 40px 0;
+
+    @include r(1200) {
+      background-size: 470px 280px;
+    }
+
+    @include r(992) {
+      background-size: 0 0; // "ИСКЛЮЧЕНИЕ" почему-то перебивает background-image:none
+      padding: 0;
+    }
+  }
+
+  &__title {
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto 45px 0;
+
+    @include r(1200) {
+      margin-bottom: 40px;
+    }
+
+    @include r(992) {
+      margin-bottom: 35px;
+    }
+
+    @include r(768) {
+      margin-bottom: 25px;
+    }
+
+    @include r(560) {
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    max-width: 538px;
+    width: 100%;
+    margin-bottom: 36px;
+    @include line-clamp(4);
+
+    @include r(992) {
+      font-size: 18px;
+      max-width: 100%;
+    }
+
+    @include r(768) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    @include r(560) {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    @extend %background-image;
+  }
+
+  &__img {
+    &--appstore {
+      width: 120px;
+      height: 40px;
+      margin-right: 24px;
+    }
+
+    &--googleplay {
+      width: 135px;
+      height: 40px;
+    }
+  }
+
+  @include r(560) {
+    padding-bottom: 30px;
+  }
+}

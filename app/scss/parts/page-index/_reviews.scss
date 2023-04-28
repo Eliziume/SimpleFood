@@ -1,0 +1,187 @@
+.reviews {
+  &__title {
+    margin-bottom: 45px;
+
+    @include r(992) {
+      margin-bottom: 40px;
+    }
+
+    @include r(768) {
+      margin-bottom: 35px;
+    }
+
+    @include r(560) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    padding-bottom: 84px;
+
+    .slick-dots {
+      display: flex;
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      li.slick-active {
+        button {
+          background-color: $orange-900;
+        }
+      }
+
+      button {
+        &:focus {
+          box-shadow: 0 0 0 2px $orange-900;
+          background-color: $gray;
+        }
+
+        &:hover {
+          box-shadow: 0 0 0 2px rgba(255, 122, 80, 0.7);
+          background-color: $fill;
+        }
+
+        &:active {
+          background-color: $peach;
+          box-shadow: none;
+        }
+      }
+    }
+
+    li:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    button {
+      font-size: 0;
+      background-color: $gray;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      transition: background-color 0.5s, box-shadow 0.5s;
+    }
+
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      font-size: 0;
+      width: 34px;
+      height: 34px;
+      background-color: $color-white;
+      border-radius: 50%;
+      border: 3px solid $gray;
+      transition: border-color 0.5s, background-color 0.5s, box-shadow 0.5s;
+
+      &::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        content: "";
+        @extend %background-image;
+        @extend %mask;
+        width: 22px;
+        height: 19px;
+        background-color: $gray;
+
+        transition: background-color 0.5s;
+
+        @include r(768) {
+          width: 40px;
+          height: 30px;
+        }
+
+        @include r(560) {
+          width: 22px;
+          height: 19px;
+        }
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      }
+
+      &:hover {
+        border-color: $peach;
+        background-color: $fill;
+
+        &::before {
+          background-color: $peach;
+        }
+      }
+
+      &:active {
+        box-shadow: none;
+        border-color: $fill;
+
+        &::before {
+          background-color: #ff7a50;
+        }
+      }
+
+      @include r(768) {
+        top: 75px;
+        bottom: auto;
+        width: 55px;
+        height: 55px;
+      }
+
+      @include r(560) {
+        top: 33px;
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    .slick-prev {
+      transform: translateX(-109px);
+      z-index: 1;
+
+      @include r(768) {
+        transform: translateX(-189px);
+      }
+
+      @include r(560) {
+        transform: translateX(-135px);
+      }
+    }
+
+    .slick-next {
+      transform: translateX(75px) scale(-1, 1);
+
+      @include r(768) {
+        transform: translateX(125px) scale(-1, 1);
+      }
+
+      @include r(560) {
+        transform: translateX(101px) scale(-1, 1);
+      }
+    }
+
+    .slick-prev::before {
+      -webkit-mask-image: url("../images/sprite.svg#slick-icon");
+      mask-image: url("../images/sprite.svg#slick-icon");
+    }
+
+    .slick-next::before {
+      -webkit-mask-image: url("../images/sprite.svg#slick-icon");
+      mask-image: url("../images/sprite.svg#slick-icon");
+    }
+
+    .slick-disabled {
+      border: 3px solid #ff7a50;
+
+      &::before {
+        background-color: #ff7a50;
+      }
+    }
+
+    @include r(768) {
+      padding-bottom: 0;
+    }
+  }
+}

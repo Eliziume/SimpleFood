@@ -1,0 +1,63 @@
+.socials-list {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #ececec;
+    transition: box-shadow 0.5s, background-color 0.5s;
+
+    &:focus {
+      box-shadow: $color-bs;
+      background-color: $fill;
+    }
+
+    &:hover {
+      background-color: $orange-900;
+
+      .socials-list__icon {
+        fill: $color-white;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+      background-color: $fill;
+
+      .socials-list__icon {
+        fill: $orange-900;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    transition: fill 0.3s;
+
+    &--facebook {
+      width: 10px;
+      height: 21px;
+    }
+
+    &--twitter {
+      width: 21px;
+      height: 17px;
+    }
+
+    &--instagram {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

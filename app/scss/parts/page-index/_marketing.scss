@@ -1,0 +1,140 @@
+.marketing {
+  &__inner {
+    position: relative;
+    max-width: 1030px;
+    margin: 0 auto;
+    background: no-repeat;
+    background-size: 440px 585px;
+    padding: 58px 0;
+
+    @include r(1200) {
+      background-size: 430px 560px;
+    }
+
+    @include r(992) {
+      background-size: 420px 530px;
+    }
+
+    @include r(890) {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(249, 250, 255, 0.85);
+      }
+    }
+
+    @include r(768) {
+      background-size: 410px 505px;
+    }
+
+    @include r(560) {
+      background-size: 348px 462px;
+    }
+  }
+
+  &__info {
+    position: relative;
+    max-width: 470px;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  &__title {
+    width: auto;
+  }
+
+  &__title,
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    @include line-clamp(4);
+
+    @include r(992) {
+      font-size: 18px;
+    }
+
+    @include r(560) {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 41px;
+
+    @include r(560) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    font-size: 24px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 60px;
+    @include line-clamp(1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -4px;
+      width: 34px;
+      height: 34px;
+      @extend %background-image;
+    }
+
+    &--time::before {
+      background-image: url("../images/marketing/icons/time-icon.svg");
+    }
+
+    &--delivery::before {
+      background-image: url("../images/marketing/icons/delivery-icon.svg");
+    }
+
+    &--places::before {
+      background-image: url("../images/marketing/icons/places-icon.svg");
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @include r(992) {
+      font-size: 22px;
+    }
+
+    @include r(768) {
+      font-size: 20px;
+    }
+
+    @include r(560) {
+      padding-left: 45px;
+      font-size: 18px;
+    }
+
+    @include r(350) {
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    @include r(768) {
+      font-size: 16px;
+    }
+
+    @include r(560) {
+      font-size: 14px;
+    }
+  }
+
+
+  @include r(560) {
+    padding: 0;
+  }
+}

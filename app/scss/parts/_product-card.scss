@@ -1,0 +1,33 @@
+.product-card {
+  @extend %flex-col;
+  height: 100%;
+
+  &__img {
+    margin: 0 auto 10px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: 15px;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    font-weight: 400;
+    @include line-clamp(2);
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $darkBlue-900;
+    margin: auto 0 10px;
+    @include line-clamp(1);
+  }
+
+  &__cart {
+    font-size: 14px;
+    padding: 7px 16px;
+  }
+}

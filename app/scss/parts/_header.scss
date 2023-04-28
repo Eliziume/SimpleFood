@@ -1,0 +1,120 @@
+.header {
+  &__top {
+    padding: 47px 0;
+
+    @include r(1200) {
+      padding: 40px 0;
+    }
+
+    @include r(992) {
+      padding: 35px 0;
+    }
+
+    @include r(768) {
+      padding: 30px 0;
+    }
+
+    @include r(560) {
+      padding: 25px 0;
+    }
+  }
+
+  &__menu {
+    @extend %flex;
+    margin-left: auto;
+  }
+
+  &__buttons {
+    @extend %flex;
+
+    @include r(768) {
+      margin: 0 20px 0 auto;
+    }
+  }
+
+  &__button {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    span {
+      position: absolute;
+      padding: 0 4px 0 4px;
+      top: 9px;
+      left: 28px;
+      font-size: 10px;
+      line-height: 15px;
+      color: $color-white;
+      background-color: $orange-900;
+      border-radius: 50%;
+      transition: background-color 0.5s, color 0.5s;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    height: 44px;
+    width: 44px;
+
+    &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+
+      span {
+        color: $color-white;
+        background-color: $orange-900;
+      }
+    }
+
+    &:hover {
+      background-color: $orange-900;
+
+      .header__icon {
+        stroke: $color-white;
+      }
+
+      span {
+        background-color: $color-white;
+        color: $orange-900;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+      background-color: rgba(255, 122, 80, 0.1);
+
+      .header__icon {
+        stroke: $darkBlue-900;
+      }
+
+      span {
+        color: $color-white;
+        background-color: $orange-900;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: $darkBlue-900;
+    transition: stroke 0.3s;
+  }
+}
+
+.burger {
+  display: none;
+  @include burger;
+
+  &--mobile {
+    width: 20px;
+  }
+
+  @include r(768) {
+    display: block;
+  }
+}
+

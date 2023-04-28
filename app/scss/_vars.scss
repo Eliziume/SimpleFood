@@ -1,33 +1,23 @@
 $size-body: 20px;
 $lh-body: 1.5;
-$silver-100: #F9FAFF;
+$silver-100: #f9faff;
 $padding-section: 60px 0;
 
-$dark: #31352B;
-$orange-900: #FF6838;
-$color-white: #FFFFFF;
+$dark: #31352b;
+$orange-900: #ff6838;
+$color-white: #ffffff;
 $darkBlue-900: #363853;
-$gray: #C2C2C2;
+$gray: #c2c2c2;
 $fill: #fff2ed;
 $color-bs: 0 0 0 2px rgba(255, 104, 56, 0.7);
+$peach: #ffae94;
 
 $size-title: 36px;
 
-
-%rubik-300 {
-  font-family: "Rubik", sans-serif;
-  font-weight: 300;
-}
-
-%rubik-400 {
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-}
-
-%rubik-500 {
-  font-family: "Rubik", sans-serif;
-  font-weight: 500;
-}
+$burgerWidth: 30px;
+$burgerHeight: 20px;
+$burgerLineHeight: 2px;
+$burgerColor: $darkBlue-900;
 
 %flex {
   display: flex;
@@ -47,5 +37,11 @@ $size-title: 36px;
   background-size: cover;
 }
 
-
-
+%mask {
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}

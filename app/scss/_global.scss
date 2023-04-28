@@ -10,6 +10,21 @@ body {
   text-rendering: optimizeSpeed;
 }
 
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
 .container {
   max-width: 1200px;
   padding: 0 15px;
@@ -18,6 +33,19 @@ body {
 
 .section {
   padding: $padding-section;
+
+  @include r(1200) {
+    padding: 50px 0;
+  }
+  @include r(992) {
+    padding: 40px 0;
+  }
+  @include r(768) {
+    padding: 30px 0;
+  }
+  @include r(560) {
+    padding: 20px 0;
+  }
 }
 
 .sr-only {
@@ -52,7 +80,6 @@ body {
 }
 
 .category__list .mixitup-control-active {
-
   background-color: $orange-900;
   color: $color-white;
 
@@ -65,8 +92,34 @@ body {
   border-radius: 5px;
   transition: box-shadow 0.5s, opacity 0.5s;
 
+  &__img {
+    width: 200px;
+    height: 39px;
+    object-fit: cover;
+
+    @include r(992) {
+      .logo__img:not(.logo--mobile, .logo--footer) {
+        width: 180px;
+        height: 30px;
+      }
+    }
+
+    @include r(768) {
+      &:not(.logo--mobile, .logo--footer) {
+        width: 160px;
+        height: 25px;
+      }
+    }
+    @include r(560) {
+      &:not(.logo--mobile, .logo--footer) {
+        width: 116px;
+        height: 23px;
+      }
+    }
+  }
+
   &:focus {
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   }
 
   &:hover {
@@ -79,12 +132,26 @@ body {
 }
 
 .title {
-  @extend %rubik-500;
+  font-weight: 500;
   width: fit-content;
   margin: 0 auto;
   color: $darkBlue-900;
   font-size: $size-title;
   line-height: 1.3;
+  @include line-clamp(2);
+
+  @include r(1200) {
+    font-size: 32px;
+  }
+  @include r(992) {
+    font-size: 30px;
+  }
+  @include r(768) {
+    font-size: 26px;
+  }
+  @include r(560) {
+    font-size: 24px;
+  }
 }
 
 .btn {

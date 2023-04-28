@@ -1,0 +1,23 @@
+.menu {
+  @extend %flex;
+  margin: 0 44px 0 auto;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1.17;
+
+    &--active {
+      color: $orange-900;
+    }
+  }
+
+  @include r(768) {
+    display: none;
+  }
+}
