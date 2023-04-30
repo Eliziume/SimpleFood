@@ -8,9 +8,13 @@ $orange-900: #ff6838;
 $color-white: #ffffff;
 $darkBlue-900: #363853;
 $gray: #c2c2c2;
+$arrow: #C1C1C1;
 $fill: #fff2ed;
 $color-bs: 0 0 0 2px rgba(255, 104, 56, 0.7);
 $peach: #ffae94;
+$color-breadcrumbs: rgba(255, 122, 80, 0.1);
+$color-filter: #ECECEC;
+$color-brand: #FAEDED;
 
 $size-title: 36px;
 
@@ -22,6 +26,12 @@ $burgerColor: $darkBlue-900;
 %flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -44,4 +54,12 @@ $burgerColor: $darkBlue-900;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+}
+
+%input-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
 }

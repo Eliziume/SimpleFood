@@ -6,7 +6,17 @@
 @import "global";
 
 @import "./parts/header";
+@import "./parts/breadcrumbs";
 
+@import "./parts/catalog-page/catalog-products";
+@import "./parts/catalog-page/select-box";
+@import "./parts/catalog-page/category-filter";
+@import "./parts/catalog-page/offers-filter";
+@import "./parts/catalog-page/price-range";
+@import "./parts/catalog-page/catalog-list";
+@import "./parts/catalog-page/mobile-catalog";
+@import "./parts/pagination";
+@import "./parts/catalog-page/stock";
 @import "./parts/page-index/mobile";
 @import "./parts/page-index/promo";
 

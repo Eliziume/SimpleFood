@@ -10,7 +10,8 @@ body {
   text-rendering: optimizeSpeed;
 }
 
-.lock {
+.lock,
+.lock--mobile-catalog {
   overflow: hidden;
   position: relative;
 
@@ -37,12 +38,15 @@ body {
   @include r(1200) {
     padding: 50px 0;
   }
+
   @include r(992) {
     padding: 40px 0;
   }
+
   @include r(768) {
     padding: 30px 0;
   }
+
   @include r(560) {
     padding: 20px 0;
   }
@@ -63,11 +67,10 @@ body {
 
 .animation {
   border-radius: 5px;
-  transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s,
-    text-shadow 0.5s, display 0.5s;
+  transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s, text-shadow 0.5s, display 0.5s;
 
   &:focus {
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   }
 
   &:hover {
@@ -110,6 +113,7 @@ body {
         height: 25px;
       }
     }
+
     @include r(560) {
       &:not(.logo--mobile, .logo--footer) {
         width: 116px;
@@ -143,12 +147,15 @@ body {
   @include r(1200) {
     font-size: 32px;
   }
+
   @include r(992) {
     font-size: 30px;
   }
+
   @include r(768) {
     font-size: 26px;
   }
+
   @include r(560) {
     font-size: 24px;
   }
@@ -212,5 +219,38 @@ body {
   &:active {
     color: $darkBlue-900;
     box-shadow: none;
+  }
+}
+
+.filter {
+  position: relative;
+  background-color: $color-white;
+  border: 1px solid $color-filter;
+  border-radius: 5px;
+  padding: 15px 15px 25px 15px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    color: $darkBlue-900;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 58px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-filter;
+    }
   }
 }

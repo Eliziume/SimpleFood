@@ -1,0 +1,58 @@
+.price-range {
+  @extend %flex;
+
+  &__item {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $gray;
+
+    span {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 40px;
+      background-color: $color-brand;
+      border-radius: 3px;
+      line-height: 1;
+      color: $dark;
+      margin: 0 5px 0 5px;
+    }
+  }
+
+  &:focus {
+    span {
+      border: 1px solid $orange-900;
+    }
+  }
+}
+
+.irs--flat .irs-line {
+  top: 30px;
+  height: 2px;
+  background-color: $gray;
+  border-radius: 0;
+}
+
+.irs--flat .irs-bar {
+  top: 30px;
+  height: 2px;
+  background-color: $orange-900;
+}
+
+.irs--flat .irs-handle {
+  top: 22px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: $orange-900;
+}
+
+.irs--flat .irs-handle>i:first-child,
+.irs-max,
+.irs-min,
+.irs-to,
+.irs-from {
+  display: none;
+}

@@ -1,0 +1,88 @@
+.catalog-products {
+  &__top {
+    @extend %flex;
+    margin-bottom: 60px;
+
+    @include r(992) {
+      margin-bottom: 50px;
+    }
+
+    @include r(768) {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+
+    @include r(560) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__sort-box {
+    display: flex;
+
+    @include r(768) {
+      margin-left: auto;
+    }
+
+    @include r(560) {
+      margin: 0 auto 0 0;
+    }
+  }
+
+  &__title {
+    margin: 0 auto 0 0;
+
+    @include r(768) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inner {
+    display: flex
+  }
+
+  &__filtres {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 30px;
+
+    @include r(768) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    display: none;
+    position: relative;
+    width: 47px;
+    height: 47px;
+    margin-right: 10px;
+    background-color: $color-brand;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 32px;
+      height: 36px;
+      @extend %background-image;
+      @extend %mask;
+      background-color: $darkBlue-900;
+      -webkit-mask-image: url("../images/sprite.svg#filter-btn");
+      mask-image: url("../images/sprite.svg#filter-btn");
+      transition: background-color 0.5s;
+    }
+
+    &:hover {
+      &::before {
+        background-color: $orange-900;
+      }
+    }
+
+    @include r(768) {
+      display: block;
+    }
+  }
+}

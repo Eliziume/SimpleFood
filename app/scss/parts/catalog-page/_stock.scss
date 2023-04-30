@@ -1,0 +1,96 @@
+.stock {
+  padding-bottom: 90px;
+
+  &__title {
+    margin: 0 auto 60px;
+
+    @include r(768) {
+      margin-bottom: 50px;
+    }
+
+    @include r(560) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__items {
+    display: flex;
+
+    @include r(1200) {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: -30px;
+    }
+
+    .slick-dots {
+      display: flex;
+
+      button {
+        font-size: 0;
+        width: 15px;
+        height: 15px;
+        background-color: $gray;
+        border-radius: 50%;
+        transition: background-color 0.5s;
+      }
+
+      li {
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+
+      .slick-active {
+        button {
+          background-color: $orange-900;
+        }
+      }
+    }
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    @include r(1200) {
+      margin-bottom: 30px;
+    }
+
+    @include r(800) {
+      max-width: none;
+      margin: 0 auto;
+      margin-right: 0;
+    }
+  }
+
+  .restaurants-card {
+    &__info {
+      display: none;
+    }
+
+    &__title {
+      display: block;
+      white-space: normal;
+      font-weight: 400;
+      @include line-clamp(2);
+    }
+
+    @include r(800) {
+      max-width: 345px;
+      width: 100%;
+      margin: 0 auto 45px;
+    }
+  }
+
+  @include r(992) {
+    padding-bottom: 80px;
+  }
+
+  @include r(800) {
+    padding-bottom: 60px;
+  }
+}

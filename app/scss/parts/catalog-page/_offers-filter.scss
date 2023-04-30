@@ -1,0 +1,73 @@
+.offers-filter {
+  &__label {
+    position: relative;
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+
+    &:hover .offers-filter__text {
+      color: $orange-900;
+    }
+
+    &:hover .offers-filter__checkbox {
+      border-color: $orange-900;
+    }
+
+    &:focus .offers-filter__checkbox {
+      border-color: $orange-900;
+    }
+  }
+
+  &__text {
+    order: 1;
+    padding-left: 36px;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    transition: color 0.5s;
+
+    &:focus {
+      color: $dark;
+    }
+  }
+
+  &__input {
+    @extend %input-hidden;
+
+    &:checked+.offers-filter__checkbox::before {
+      display: inline;
+      border-color: $darkBlue-900;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: $color-brand;
+    border: 1px solid $color-filter;
+    border-radius: 3px;
+    transition: border-color 0.5s;
+
+    &::before {
+      display: none;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 9px;
+      @extend %background-image;
+      background-image: url("../images/sprite.svg#check");
+    }
+
+    &:focus {
+      border-color: $orange-900;
+    }
+  }
+}
