@@ -21,7 +21,7 @@
     display: flex;
 
     @include r(768) {
-      margin-left: auto;
+      margin: 0 auto;
     }
 
     @include r(560) {
@@ -45,9 +45,28 @@
     max-width: 270px;
     width: 100%;
     margin-right: 30px;
+    transition: transform 1s;
 
     @include r(768) {
-      display: none;
+      position: fixed;
+      z-index: 20;
+      max-width: none;
+      width: 80%;
+      overflow-y: auto;
+      height: 100vh;
+      background-color: $color-white;
+      margin-right: 0;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 20px 20px 0 0;
+      transform: translateX(-500%);
+
+    }
+
+    &--active {
+      transform: translateX(0);
     }
   }
 
@@ -84,5 +103,9 @@
     @include r(768) {
       display: block;
     }
+  }
+
+  @include r(560) {
+    padding-top: 41px;
   }
 }

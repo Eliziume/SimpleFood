@@ -1,58 +1,74 @@
-.price-range {
-  @extend %flex;
+.price-filter {
 
-  &__item {
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    color: $gray;
+  &__range {
+    display: flex;
+  }
+
+  &__range-item {
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
 
     span {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 70px;
-      height: 40px;
-      background-color: $color-brand;
-      border-radius: 3px;
-      line-height: 1;
-      color: $dark;
-      margin: 0 5px 0 5px;
+      font-size: 16px;
+      line-height: 1.2;
+      letter-spacing: 0.03em;
+      color: $gray;
     }
   }
 
-  &:focus {
-    span {
-      border: 1px solid $orange-900;
+  &__range-input {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $dark;
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    background-color: #FAEDED;
+    border: 1px solid #FAEDED;
+    border-radius: 3px;
+    transition: border-color 0.5s;
+
+    &:focus{
+      border-color: $orange-900;
     }
   }
 }
 
-.irs--flat .irs-line {
-  top: 30px;
+.irs--round .irs-line {
+  top: 36px;
   height: 2px;
   background-color: $gray;
   border-radius: 0;
 }
 
-.irs--flat .irs-bar {
-  top: 30px;
+.irs--round .irs-bar {
+  top: 36px;
   height: 2px;
   background-color: $orange-900;
 }
 
-.irs--flat .irs-handle {
-  top: 22px;
+.irs--round .irs-handle {
+  top: 28px;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
+  border: none;
   background-color: $orange-900;
+  border-radius: 50%;
+  box-shadow: none;
 }
 
-.irs--flat .irs-handle>i:first-child,
-.irs-max,
-.irs-min,
-.irs-to,
-.irs-from {
+.irs--round .irs-from,
+.irs--round .irs-to,
+.irs--round .irs-single,
+.irs--round .irs-min,
+.irs--round .irs-max {
   display: none;
+}
+
+.irs--round .irs-handle.state_hover,
+.irs--round .irs-handle:hover {
+  background-color: $orange-900;
 }

@@ -8,19 +8,48 @@
     margin: 0 10px 10px 0;
     max-width: 210px;
     width: 100%;
+
+    @include r(1200) {
+      max-width: none;
+      width: 30%;
+      justify-content: center;
+    }
+
+    @include r(992) {
+      width: 48%;
+    }
+
+    @include r(768) {
+      width: 31%;
+    }
+
+    @include r(560) {
+      margin: 0 5px 5px 0;
+      width: 48%;
+      max-width: 258px;
+      min-width: 170px;
+
+      &:nth-last-child(1),
+      &:nth-last-child(2),
+      &:nth-last-child(3),
+      &:nth-last-child(4),
+      &:nth-last-child(5),
+      &:nth-last-child(6) {
+        display: none;
+      }
+    }
+
+    @include r(370) {
+      width: 100%;
+      max-width: none;
+    }
   }
 
   .product-card {
-    text-align: center;
-    max-width: 210px;
-    width: 100%;
-    height: 299px;
-    background-color: $color-white;
-    padding: 20px 15px;
-  }
-
-  @include r(1200) {
-    justify-content: center;
+    @include r(1200) {
+      max-width: none;
+      width: 100%;
+    }
   }
 
   @include r(768) {

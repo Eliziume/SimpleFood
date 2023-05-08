@@ -2,20 +2,20 @@
   <div class="header__top">
     <div class="container">
       <nav class="header__menu">
-        <a class="logo" href="#body">
-          <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="39" />
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="39">
         </a>
         <ul class="menu">
           <li class="menu__item">
-            <a href="#body" class="menu__link animation">
+            <a href="index.html" class="menu__link @menuIndex animation">
               Главная
             </a>
           </li>
           <li class="menu__item">
-            <a href="#category" class="menu__link menu__link--active animation"> Блюда </a>
+            <a href="catalog-page.html" class="menu__link @menuFood animation"> Блюда </a>
           </li>
           <li class="menu__item">
-            <a href="#address" class="menu__link animation"> Контакты </a>
+            <a href="#address" class="menu__link animation menu__link--contacts"> Контакты </a>
           </li>
         </ul>
         <ul class="header__buttons">
@@ -41,10 +41,11 @@
           <span class="burger__line"></span>
           <span class="sr-only">Открыть меню</span>
         </button>
+
         <div class="mobile">
           <div class="mobile__menu-top">
-            <a class="logo" href="#body">
-              <img class="logo__img logo--mobile" src="images/logo.svg" alt="логотип" width="200" height="39" />
+            <a class="logo" href="index.html">
+              <img class="logo__img logo__img--mobile" src="images/logo.svg" alt="логотип" width="200" height="39">
             </a>
             <button class="burger burger--mobile" type="button">
               <span class="burger__line"></span>
@@ -54,15 +55,15 @@
 
           <ul class="menu">
             <li class="menu__item">
-              <a href="#body" class="menu__link menu__link--active animation">
+              <a href="index.html" class="menu__link menu__link--active animation">
                 Главная
               </a>
             </li>
             <li class="menu__item">
-              <a href="#category" class="menu__link animation"> Блюда </a>
+              <a href="catalog-page.html" class="menu__link animation"> Блюда </a>
             </li>
             <li class="menu__item">
-              <a href="#address" class="menu__link animation"> Контакты </a>
+              <a class="menu__link animation menu__link--contacts" href="#address"> Контакты </a>
             </li>
           </ul>
           <address class="address">

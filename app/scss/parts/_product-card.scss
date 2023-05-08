@@ -1,4 +1,20 @@
 .product-card {
+  max-width: 210px;
+  max-height: 299px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: $color-white;
+  box-shadow: 0 0 0 1px #ececec;
+  padding: 20px 15px;
+  border-radius: 5px;
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0 0 0 1px $orange-900;
+  }
+
+
   @extend %flex-col;
   height: 100%;
 
@@ -29,5 +45,14 @@
   &__cart {
     font-size: 14px;
     padding: 7px 16px;
+  }
+
+  @include r(1200) {
+    max-width: none;
+    width: 100%;
+  }
+
+  @include r(365) {
+    padding-top: 10px;
   }
 }

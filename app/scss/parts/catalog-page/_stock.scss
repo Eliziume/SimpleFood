@@ -1,15 +1,15 @@
 .stock {
-  padding-bottom: 90px;
+  padding: 46px 0 67px;
 
   &__title {
-    margin: 0 auto 60px;
+    margin: 0 auto 60px 0;
 
     @include r(768) {
       margin-bottom: 50px;
     }
 
     @include r(560) {
-      margin-bottom: 40px;
+      margin: 0 auto 40px;
     }
   }
 
@@ -51,6 +51,8 @@
   &__item {
     max-width: 370px;
     width: 100%;
+    max-height: 392px;
+    height: 100%;
 
     &:not(:last-child) {
       margin-right: 30px;
@@ -61,13 +63,24 @@
     }
 
     @include r(800) {
-      max-width: none;
-      margin: 0 auto;
-      margin-right: 0;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      max-width: 100%;
+    }
+
+    @include r(560) {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
   }
 
   .restaurants-card {
+    max-height: 392px;
+    height: 100%;
+
     &__info {
       display: none;
     }
@@ -79,10 +92,16 @@
       @include line-clamp(2);
     }
 
+    &__img {
+      @include r(800) {
+        max-width: 100%;
+      }
+    }
+
     @include r(800) {
-      max-width: 345px;
+      max-width: 100%;
       width: 100%;
-      margin: 0 auto 45px;
+      margin: 0;
     }
   }
 
@@ -91,6 +110,10 @@
   }
 
   @include r(800) {
-    padding-bottom: 60px;
+    padding-bottom: 69px;
+  }
+
+  @include r(400) {
+    padding-top: 0;
   }
 }

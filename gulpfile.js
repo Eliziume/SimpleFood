@@ -11,6 +11,7 @@ const cheerio = require("gulp-cheerio");
 const replace = require("gulp-replace");
 const fileInclude = require("gulp-file-include");
 
+
 const htmlInclude = () => {
   return src(["app/html/*.html"])
     .pipe(
@@ -78,6 +79,9 @@ function scripts() {
     "node_modules/mixitup/dist/mixitup.min.js",
     "node_modules/ion-rangeslider/js/ion.rangeSlider.min.js",
     "node_modules/jquery-form-styler/dist/jquery.formstyler.min.js",
+    "node_modules/rateyo/src/jquery.rateyo.js",
+    "node_modules/swiper/swiper-bundle.min.js",
+    "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
     "app/js/main.js",
   ]) 
     .pipe(concat("main.min.js"))

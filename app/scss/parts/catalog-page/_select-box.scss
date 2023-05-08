@@ -17,10 +17,15 @@
   &:hover {
     background: transparent;
   }
+
+  @include r(560) {
+    padding-right: 31px;
+  }
 }
 
 .jq-selectbox__select-text {
   transition: color 0.5s;
+  overflow: visible;
 }
 
 .jq-selectbox__trigger {
@@ -82,4 +87,8 @@
   &:hover {
     background-color: $darkBlue-900;
   }
+}
+
+.jq-selectbox.focused .jq-selectbox__select {
+  border: 1px solid $orange-900;
 }

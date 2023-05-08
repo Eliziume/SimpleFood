@@ -1,5 +1,5 @@
 @include('components/_head.html', {
-"pageTitle": "Блюда"
+"pageTitle": "Страница продукта"
 })
 @include('components/_header.html', {
 "menuIndex": "",
@@ -7,11 +7,9 @@
 })
 
 <main class="main">
-  @include('components/_breadcrumbs.html')
-  @include('components/catalog-page/_catalog-products.html')
-  @include('components/_app.html')
-  @include('components/catalog-page/_stock.html')
-
+  @include('components/foodstuff-page/_breadcrumbs.html')
+  @include('components/foodstuff-page/_foodstuff.html')
+  @include('components/foodstuff-page/_others.html')
 </main>
 @include('components/_footer.html')
 @include('components/_footer-scripts.html')

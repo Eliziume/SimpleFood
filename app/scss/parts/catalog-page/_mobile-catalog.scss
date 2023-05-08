@@ -17,32 +17,7 @@
     transform: translateX(0%);
   }
 
-  .close {
-    display: block;
-    background-color: $color-brand;
-    margin-left: auto;
-    width: 40px;
-    height: 40px;
-    border-radius: 3px;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 18px;
-      height: 18px;
-      margin-bottom: 20px;
-      @extend %background-image;
-      @extend %mask;
-      background-color: $darkBlue-900;
-      -webkit-mask-image: url("../images/sprite.svg#close");
-      mask-image: url("../images/sprite.svg#close");
-      transition: background-color 0.5s;
-      transform: translate(-50%, -50%);
-    }
-  }
+ 
 
   .catalog-products__filtres {
     display: block;

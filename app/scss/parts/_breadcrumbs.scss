@@ -20,7 +20,7 @@
           content: "";
           position: absolute;
           right: 0;
-          top: 10px;
+          top: 12px;
           width: 11px;
           height: 11px;
           @extend %background-image;
@@ -31,7 +31,16 @@
         }
       }
     }
+
+    a {
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      color: #505050;
+      line-height: 1.2;
+    }
   }
 
-
+  @include r(560) {
+    padding: 17px 0;
+  }
 }

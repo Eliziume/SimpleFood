@@ -4,6 +4,16 @@
   width: 100%;
   margin: 0 auto;
 
+  &__item {
+
+    @include r(400) {
+      &:nth-child(3),
+      &:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+
   &__link {
     position: relative;
     @extend %flex-center;
@@ -59,26 +69,27 @@
       border: 1px solid $darkBlue-900;
     }
 
-    &:hover {
+    &:hover:not(.pagination__link--disabled):not(.pagination__link--more) {
       border-color: transparent;
       background-color: $orange-900;
       color: $color-white;
     }
 
-    &:active {
+    &:active:not(.pagination__link--disabled):not(.pagination__link--more) {
       box-shadow: inset 0 -1px 4px 2px rgba(0, 0, 0, 0.15);
       background-color: $color-brand;
       border-color: transparent;
       color: $darkBlue-900;
     }
 
-    &:focus {
+    &:focus:not(.pagination__link--disabled):not(.pagination__link--more) {
       box-shadow: 0 0 0 2px $orange-900;
       border-color: transparent;
     }
-
-  
   }
-
-
+  @include r(560) {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  }
 }

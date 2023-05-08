@@ -35,6 +35,13 @@
 @import "./parts/page-index/blockquote";
 
 @import "./parts/app";
+
+@import "./parts/foodstuff-page/foodstuff";
+@import "./parts/foodstuff-page/foodstuff__input";
+@import "./parts/foodstuff-page/tabs";
+@import "./parts/foodstuff-page/rating";
+@import "./parts/foodstuff-page/others";
+
 @import "./parts/footer";
 @import "./parts/form";
 @import "./parts/address";

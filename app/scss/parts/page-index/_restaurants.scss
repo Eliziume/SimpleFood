@@ -17,12 +17,21 @@
     }
 
     @include r(768) {
-      margin: 0 -15px -15px 0;
+      margin: 0;
     }
   }
 
   &__item {
     margin: 0 15px 15px 0;
+
+    @include r(768) {
+      margin: 0 10px 0 0;
+    }
+
+    @include r(560) {
+      margin: 0;
+    }
+
   }
 
   .slick-dots {

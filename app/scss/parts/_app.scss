@@ -61,6 +61,31 @@
   &__link {
     display: inline-block;
     @extend %background-image;
+    border: 3px solid transparent;
+    border-radius: 13px;
+    transition: border 0.5s,
+      opacity 0.5s;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &--appstore {
+      width: 120px;
+    }
+
+    &--play {
+      width: 135px;
+    }
+
+    &:hover,
+    &:focus {
+      border: 3px solid $orange-900;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   &__img {

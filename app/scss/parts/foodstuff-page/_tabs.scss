@@ -1,0 +1,336 @@
+.tabs {
+  font-size: 0;
+  max-width: 690px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__descr-list {
+    opacity: 0.9;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      @include line-clamp(10);
+    }
+
+    @include r(768) {
+      font-size: 18px;
+    }
+
+    @include r(560) {
+      font-size: 16px;
+    }
+  }
+
+  &__specific-list {
+    li {
+      font-weight: 500;
+      @include line-clamp(2);
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    span {
+      font-weight: 400;
+    }
+
+    @include r(768) {
+      font-size: 18px;
+    }
+
+    @include r(560) {
+      font-size: 16px;
+    }
+  }
+
+  &__reviews-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $darkBlue-900;
+    margin-bottom: 30px;
+    @include line-clamp(2);
+
+    @include r(768) {
+      font-size: 22px;
+    }
+
+    @include r(560) {
+      font-size: 20px;
+    }
+  }
+
+  &__reviews-list {
+    margin-bottom: 60px;
+  }
+
+  &__reviews-item {
+    position: relative;
+    color: #505050;
+
+    &:not(:last-child) {
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #E4E4E4;
+      }
+
+      @include r(768) {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      @include r(560) {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__reviews-top {
+    @extend %flex;
+    margin-bottom: 20px;
+
+    @include r(560) {
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__reviews-comment {
+    @include line-clamp(10);
+
+    @include r(768) {
+      font-size: 18px;
+    }
+
+    @include r(560) {
+      font-size: 16px;
+    }
+  }
+
+  &__reviews-link {
+
+    &--author {
+      margin: 0 auto 0 25px;
+    }
+  }
+
+  &__reviews-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__reviews-author {
+    @include line-clamp(4);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+
+    span {
+      display: block;
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.3;
+      letter-spacing: 0.03em;
+      @include line-clamp(2);
+    }
+  }
+
+  &__reviews-inner {
+    display: flex;
+    margin-bottom: 30px;
+
+    @include r(768) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__reviews-features {
+    width: 100%;
+    background-color: $color-white;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.3;
+    padding: 16px 18px;
+
+    &::placeholder {
+      opacity: 0.7;
+    }
+  }
+
+  &__reviews-textareabox {
+    max-width: 400px;
+    margin-right: 30px;
+    width: 100%;
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      color: $arrow;
+      width: 100%;
+      min-height: 165px;
+      resize: vertical;
+    }
+
+    @include r(768) {
+      max-width: none;
+      margin: 0 0 20px;
+    }
+
+  }
+
+  &__reviews-inputbox {
+    max-width: 260px;
+    width: 100%;
+
+    @include r(768) {
+      max-width: none;
+    }
+  }
+
+  &__reviews-input {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @include r(768) {
+        margin-bottom: 20px;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__reviews-checkbox {
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 30px;
+
+    label {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
+
+    input {
+      @extend %input-hidden;
+
+      &:checked+.checkbox-style::before {
+        display: inline;
+        border-color: $darkBlue-900;
+      }
+    }
+
+    .checkbox-style {
+      position: absolute;
+      left: 0;
+      top: 2px;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-color: $color-white;
+      border: 1px solid $arrow;
+      border-radius: 3px;
+      transition: border-color 0.5s;
+
+      &::before {
+        display: none;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 9px;
+        @extend %background-image;
+        background-image: url("../images/sprite.svg#check");
+      }
+
+      &:focus {
+        border-color: $orange-900;
+      }
+    }
+  }
+}
+
+.tabs>input[type="radio"] {
+  display: none;
+}
+
+.tabs>div {
+  display: none;
+  font-size: 20px;
+}
+
+#tab-btn-1:checked~#tabs__descr,
+#tab-btn-2:checked~#tabs__specific,
+#tab-btn-3:checked~#tabs__reviews {
+  display: block;
+}
+
+.tabs>label {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: $darkBlue-900;
+  transition: color 0.15s ease-in-out;
+  cursor: pointer;
+  position: relative;
+
+  &:not(:last-of-type) {
+    margin-right: 60px;
+
+    @include r(992) {
+      margin-right: 50px;
+    }
+
+    @include r(768) {
+      margin-right: 40px;
+    }
+
+    @include r(560) {
+      margin-right: 30px;
+    }
+  }
+
+  @include r(768) {
+    font-size: 22px;
+  }
+
+  @include r(560) {
+    font-size: 20px;
+  }
+}
+
+.tabs>input[type="radio"]:checked+label {
+  color: $orange-900;
+}

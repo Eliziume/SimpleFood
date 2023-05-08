@@ -1,5 +1,6 @@
 .offers-filter {
-  &__label {
+  &__box {
+    width: fit-content;
     position: relative;
     display: flex;
 
@@ -69,5 +70,14 @@
     &:focus {
       border-color: $orange-900;
     }
+  }
+
+  label{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
 }

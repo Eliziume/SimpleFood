@@ -1,12 +1,17 @@
-@include('components/page-index/_head.html')
-@include('components/page-index/_header.html')
+@include('components/_head.html', {
+  "pageTitle": "Главная страница"
+})
+@include('components/_header.html',{
+  "menuIndex": "menu__link--active",
+  "menuFood": ""
+})
 
 <main class="main">
-  @include('components/_promo.html') @include('components/_category.html')
-  @include('components/_marketing.html')
-  @include('components/_restaurants.html')
-  @include('components/_reviews.html')
-  @include('components/page-index/_app.html')
+  @include('components/page-index/_promo.html') @include('components/page-index/_category.html')
+  @include('components/page-index/_marketing.html')
+  @include('components/page-index/_restaurants.html')
+  @include('components/page-index/_reviews.html')
+  @include('components/_app.html')
 </main>
-@include('components/page-index/_footer.html')
-@include('components/page-index/_footer-scripts.html')
+@include('components/_footer.html')
+@include('components/_footer-scripts.html')

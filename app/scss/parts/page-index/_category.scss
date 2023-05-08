@@ -141,24 +141,18 @@
 
   &__food {
     max-width: 210px;
+    max-height: 299px;
     width: 100%;
-    text-align: center;
-    background-color: $color-white;
-    box-shadow: 0 0 0 1px #ececec;
-    padding: 20px 15px;
     margin: 0 30px 30px 0;
-    border-radius: 5px;
-    transition: box-shadow 0.5s;
-
-    &:hover {
-      box-shadow: 0 0 0 1px $orange-900;
-    }
+    min-width: 170px;
 
     @include r(1200) {
-      max-width: 190px;
+      max-width: none;
+      width: 20%;
     }
 
     @include r(992) {
+      width: 30%;
       margin: 0 20px 20px 0;
     }
 
@@ -167,13 +161,12 @@
     }
 
     @include r(560) {
-      max-width: 170px;
+      width: 48%;
       margin: 0 5px 10px 0;
     }
 
     @include r(365) {
-      padding-top: 10px;
-      max-width: 100%;
+      width: 100%;
     }
   }
 
