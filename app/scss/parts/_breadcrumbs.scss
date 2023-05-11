@@ -19,7 +19,7 @@
         ::after {
           content: "";
           position: absolute;
-          right: 0;
+          right: -3px;
           top: 12px;
           width: 11px;
           height: 11px;
@@ -29,6 +29,18 @@
           -webkit-mask-image: url("../images/sprite.svg#arrow");
           mask-image: url("../images/sprite.svg#arrow");
         }
+      }
+
+      .hidden {
+        @include r(560) {
+          display: none;
+        }
+      }
+      @include r(560) {
+      &:nth-child(2){
+        margin: 0;
+        padding: 0;
+      }
       }
     }
 

@@ -5,10 +5,13 @@
     display: flex;
     margin-bottom: 91px;
 
-    @include r(1200) {}
-
     @include r(992) {
       flex-direction: column;
+      margin-bottom: 75px;
+    }
+
+    @include r(560) {
+      margin-bottom: 60px;
     }
   }
 
@@ -191,6 +194,10 @@
 
   &__list {
     margin-bottom: 20px;
+
+    @include r(560) {
+      margin-bottom: 7px;
+    }
   }
 
   &__list-item {
@@ -220,9 +227,9 @@
       @extend %mask;
       width: 32px;
       height: 32px;
-      background-color: $darkBlue-900;
-      -webkit-mask-image: url("../images/sprite.svg#slick-icon");
-      mask-image: url("../images/sprite.svg#slick-icon");
+      background-color: #505050;
+      -webkit-mask-image: url("../images/sprite.svg#arrow-foodstuff");
+      mask-image: url("../images/sprite.svg#arrow-foodstuff");
       transition: background-color 0.5s;
     }
 
@@ -246,4 +253,56 @@
       transform: translate(-50%, -50%) scale(-1, 1);
     }
   }
+
+  &__icon {
+    fill: transparent;
+  }
+
+  @include r(560) {
+    padding: 31px 0;
+  }
+}
+
+.fancybox__backdrop {
+  background: $color-white;
+}
+
+.f-carousel__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 30px;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  button {
+    background-color: $gray;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+    &[aria-selected="true"] {
+      background-color: $orange-900;
+    }
+  }
+}
+
+.fancybox__slide.has-image>.fancybox__content {
+  width: 100vw !important;
+}
+
+.f-button svg {
+  stroke: #505050;
+  opacity: 1;
+}
+
+.fancybox__content>.f-button.is-close-btn {
+  opacity: 0.15;
 }

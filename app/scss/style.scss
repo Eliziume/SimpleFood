@@ -14,10 +14,9 @@
 @import "./parts/catalog-page/offers-filter";
 @import "./parts/catalog-page/price-range";
 @import "./parts/catalog-page/catalog-list";
-@import "./parts/catalog-page/mobile-catalog";
 @import "./parts/pagination";
 @import "./parts/catalog-page/stock";
-@import "./parts/page-index/mobile";
+@import "./parts/mobile";
 @import "./parts/page-index/promo";
 
 @import "./parts/menu";
@@ -37,7 +36,7 @@
 @import "./parts/app";
 
 @import "./parts/foodstuff-page/foodstuff";
-@import "./parts/foodstuff-page/foodstuff__input";
+@import "./parts/foodstuff-page/jq-number";
 @import "./parts/foodstuff-page/tabs";
 @import "./parts/foodstuff-page/rating";
 @import "./parts/foodstuff-page/others";
