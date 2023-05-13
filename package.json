@@ -9,7 +9,7 @@
   "author": "Alex Volkov",
   "license": "ISC",
   "devDependencies": {
-    "@fancyapps/ui": "^5.0.17",
+    "@fancyapps/ui": "^4.0.30",
     "browser-sync": "^2.29.1",
     "del": "^6.1.1",
     "gulp": "^4.0.2",

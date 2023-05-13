@@ -208,52 +208,6 @@
     @include line-clamp(3);
   }
 
-  .slick-prev,
-  .slick-next {
-    position: absolute;
-    font-size: 0;
-    width: 60px;
-    height: 60px;
-    background-color: transparent;
-    top: 50%;
-    transform: translateY(-50%);
-
-    &::before {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      content: "";
-      @extend %background-image;
-      @extend %mask;
-      width: 32px;
-      height: 32px;
-      background-color: #505050;
-      -webkit-mask-image: url("../images/sprite.svg#arrow-foodstuff");
-      mask-image: url("../images/sprite.svg#arrow-foodstuff");
-      transition: background-color 0.5s;
-    }
-
-    @include r(560) {
-      display: none;
-    }
-  }
-
-  .slick-prev {
-    left: 25px;
-
-    &::before {
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  .slick-next {
-    right: 25px;
-
-    &::before {
-      transform: translate(-50%, -50%) scale(-1, 1);
-    }
-  }
-
   &__icon {
     fill: transparent;
   }
@@ -267,42 +221,96 @@
   background: $color-white;
 }
 
-.f-carousel__dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  bottom: 30px;
 
-  li {
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-  }
-
-  button {
-    background-color: $gray;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-
-    &[aria-selected="true"] {
-      background-color: $orange-900;
-    }
-  }
-}
-
-.fancybox__slide.has-image>.fancybox__content {
-  width: 100vw !important;
-}
-
-.f-button svg {
-  stroke: #505050;
+.carousel__dots .carousel__dot:after {
+  width: 15px;
+  height: 15px;
+  background-color: $gray;
   opacity: 1;
 }
 
-.fancybox__content>.f-button.is-close-btn {
-  opacity: 0.15;
+.carousel__dots {
+  bottom: 20px;
+  top: auto;
+}
+
+.carousel__dots .carousel__dot.is-selected:after {
+  background-color: $orange-900;
+}
+
+.carousel__dots .carousel__dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: box-shadow 0.5s;
+
+  &::after {
+    transition: background-color 0.5s;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $orange-900;
+
+    .carousel__dot:after {
+      background-color: $gray;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 2px rgba(255, 122, 80, 0.7);
+
+    &:after {
+      background-color: #FFF2ED;
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+
+    &:after {
+      background-color: #FFAE94;
+      ;
+    }
+
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+
+}
+
+.carousel__slide {
+  width: 100%;
+  max-width: 100%;
+
+  @include r(1200) {
+    width: 350px;
+    padding: 0;
+  }
+
+  @include r(992) {
+    width: 100%;
+  }
+
+  @include r(768) {}
+
+  @include r(560) {}
+}
+
+.carousel__button svg {
+  stroke: rgba(0, 0, 0, 0.15);
+}
+
+.carousel__button.is-next svg,
+.carousel__button.is-prev svg {
+  stroke: #505050;
+}
+
+.carousel__button.is-next,
+.carousel__button.is-prev {
+
+  @include r(560) {
+    display: none;
+  }
 }

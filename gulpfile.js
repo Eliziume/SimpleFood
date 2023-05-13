@@ -81,7 +81,7 @@ function scripts() {
     "node_modules/jquery-form-styler/dist/jquery.formstyler.min.js",
     "node_modules/rateyo/src/jquery.rateyo.js",
     "node_modules/swiper/swiper-bundle.min.js",
-    "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
+    "node_modules/@fancyapps/ui/dist/fancybox.umd.js",
     "app/js/main.js",
   ]) 
     .pipe(concat("main.min.js"))
