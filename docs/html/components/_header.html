@@ -1,0 +1,118 @@
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <nav class="header__menu">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="39">
+        </a>
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="index.html" class="menu__link @menuIndex animation">
+              Главная
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="catalog-page.html" class="menu__link @menuFood animation"> Блюда </a>
+          </li>
+          <li class="menu__item">
+            <a href="#address" class="menu__link animation menu__link--contacts"> Контакты </a>
+          </li>
+        </ul>
+        <ul class="header__buttons">
+          <li class="header__button">
+            <button class="header__btn animation" type="button">
+              <span class="sr-only">Поиск по сайту</span>
+              <svg class="header__icon">
+                <use xlink:href="images/sprite.svg#search-btn"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="header__button">
+            <button class="header__btn animation" type="button">
+              <span class="sr-only">Перейти в "корзину"</span>
+              <svg class="header__icon">
+                <use xlink:href="images/sprite.svg#cart-btn"></use>
+              </svg>
+              <span>4</span>
+            </button>
+          </li>
+        </ul>
+        <button class="burger" type="button">
+          <span class="burger__line"></span>
+          <span class="sr-only">Открыть меню</span>
+        </button>
+
+        <div class="mobile">
+          <div class="mobile__menu-top">
+            <a class="logo" href="index.html">
+              <img class="logo__img logo__img--mobile" src="images/logo.svg" alt="логотип" width="200" height="39">
+            </a>
+            <button class="burger burger--mobile" type="button">
+              <span class="burger__line"></span>
+              <span class="sr-only">Открыть меню</span>
+            </button>
+          </div>
+
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="index.html" class="menu__link menu__link--active animation">
+                Главная
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="catalog-page.html" class="menu__link animation"> Блюда </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link animation menu__link--contacts" href="#address"> Контакты </a>
+            </li>
+          </ul>
+          <address class="address">
+            <ul class="address__list">
+              <li class="address__item">
+                <a class="address__link address__link--place" href="#">
+                  ул. Т.Г.Шевченко, 1
+                </a>
+              </li>
+              <li class="address__item">
+                <a class="address__link address__link--phone" href="tel:+380501112233">
+                  380501112233
+                </a>
+              </li>
+              <li class="address__item">
+                <a class="address__link address__link--mail" href="mailto:support@sfood.com">
+                  support@sfood.com
+                </a>
+              </li>
+            </ul>
+          </address>
+          <ul class="socials-list">
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                <svg class="socials-list__icon socials-list__icon--facebook">
+                  <use xlink:href="images/sprite.svg#facebook"></use>
+                </svg>
+                <span class="sr-only">Перейти в Facebook</span>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                <svg class="socials-list__icon socials-list__icon--twitter">
+                  <use xlink:href="images/sprite.svg#twitter"></use>
+                </svg>
+                <span class="sr-only">Перейти в Twitter</span>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                <svg class="socials-list__icon socials-list__icon--instagram">
+                  <use xlink:href="images/sprite.svg#instagram"></use>
+                </svg>
+                <span class="sr-only">Перейти в Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

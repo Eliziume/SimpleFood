@@ -1,0 +1,15 @@
+@include('components/_head.html', {
+"pageTitle": "Страница продукта"
+})
+@include('components/_header.html', {
+"menuIndex": "",
+"menuFood": "menu__link--active"
+})
+
+<main class="main">
+  @include('components/foodstuff-page/_breadcrumbs.html')
+  @include('components/foodstuff-page/_foodstuff.html')
+  @include('components/foodstuff-page/_others.html')
+</main>
+@include('components/_footer.html')
+@include('components/_footer-scripts.html')

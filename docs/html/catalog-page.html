@@ -1,0 +1,17 @@
+@include('components/_head.html', {
+"pageTitle": "Блюда"
+})
+@include('components/_header.html', {
+"menuIndex": "",
+"menuFood": "menu__link--active"
+})
+
+<main class="main">
+  @include('components/_breadcrumbs.html')
+  @include('components/catalog-page/_catalog-products.html')
+  @include('components/_app.html')
+  @include('components/catalog-page/_stock.html')
+
+</main>
+@include('components/_footer.html')
+@include('components/_footer-scripts.html')
