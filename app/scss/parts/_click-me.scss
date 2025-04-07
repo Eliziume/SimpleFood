@@ -1,0 +1,5 @@
+.click-me {
+  border-radius: 16px;
+  animation: clickPulse 2s infinite;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
